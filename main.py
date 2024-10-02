@@ -88,6 +88,7 @@ class Conversation:
         # Add system message only if the conversation is new
         if not self.messages:
             self.add_message("system", system_message)
+            self.save_to_file()
 
     def add_message(self, role, content):
         self.messages.append({"role": role, "content": content})
@@ -163,7 +164,8 @@ def list_conversations():
         print("Conversations:")
         for convo in conversations:
             print(f" - {convo}")
-
+    else:
+        print("No conversations found.")
 
 def show_guide():
     guide = """
@@ -187,7 +189,7 @@ def show_guide():
        python main.py -e
        python main.py --edit-system-message
 
-    5. Load a conversation, specify the conversation name to use:
+    5. Load a conversation, specify the conversation name to use (you can choose any name; if the conversation doesn't exist, a new one gets created):
        python main.py -c CONVERSATION_NAME
        python main.py --conversation CONVERSATION_NAME
 
@@ -212,8 +214,8 @@ def show_guide():
         python main.py --list-conversations
 
     11. Show this guide:
-        python main.py -h
-        python main.py --help
+        python main.py -H
+        python main.py --custom-help
 
     Enjoy using the tool!
     """
@@ -290,6 +292,10 @@ def main():
         if current_conversation == args.delete_conversation:
             config["current_conversation"] = ""
             save_config(config)
+        return
+
+    if args.list_conversations:
+        list_conversations()
         return
 
     if args.response:
