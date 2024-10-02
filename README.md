@@ -34,7 +34,7 @@ GPT CLI is a command-line interface tool designed to interact with OpenAI's GPT 
    python main.py -k YOUR_API_KEY
    ```
 
-2. **Load a Conversation**:
+2. **Load a Conversation** (you can choose any name; if the conversation doesn't exist, a new one gets created):
    ```bash
    python main.py -c CONVERSATION_NAME
    ```
@@ -70,7 +70,7 @@ GPT CLI is a command-line interface tool designed to interact with OpenAI's GPT 
    python main.py --edit-system-message
    ```
 
-5. **Load a Conversation (you can choose any name)**:
+5. **Load a Conversation (you can choose any name; if the conversation doesn't exist, a new one gets created)**:
    ```bash
    python main.py -c CONVERSATION_NAME
    python main.py --conversation CONVERSATION_NAME
