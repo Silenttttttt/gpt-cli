@@ -12,6 +12,7 @@ GPT CLI is a command-line interface tool designed to interact with OpenAI's GPT 
 - **Conversation Management**: Load, save, and delete conversations with ease.
 - **Get AI Responses**: Generate responses for loaded conversations.
 - **Conversation Status**: Check the status of your current conversation, including message count and file path.
+- **List Conversations**: List all saved conversations.
 
 ## Installation
 
@@ -69,7 +70,7 @@ GPT CLI is a command-line interface tool designed to interact with OpenAI's GPT 
    python main.py --edit-system-message
    ```
 
-5. **Load a Conversation**:
+5. **Load a Conversation (you can choose any name)**:
    ```bash
    python main.py -c CONVERSATION_NAME
    python main.py --conversation CONVERSATION_NAME
@@ -99,10 +100,16 @@ GPT CLI is a command-line interface tool designed to interact with OpenAI's GPT 
    python main.py --delete-conversation CONVERSATION_NAME
    ```
 
-10. **Show the Help Text**:
+10. **List All Conversations**:
     ```bash
-    python main.py -h
-    python main.py --help
+    python main.py -l
+    python main.py --list-conversations
+    ```
+
+11. **Show the Custom Help Text**:
+    ```bash
+    python main.py -H
+    python main.py --custom-help
     ```
 
 ## Contributing
