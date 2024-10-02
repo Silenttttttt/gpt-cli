@@ -16,43 +16,94 @@ GPT CLI is a command-line interface tool designed to interact with OpenAI's GPT 
 ## Installation
 
 1. Clone the repository:
+   ```bash
    git clone https://github.com/Silenttttttt/gpt_cli.git
    cd gpt_cli
+   ```
 
 2. Install the required dependency:
-  `pip install openai`
+   ```bash
+   pip install openai
+   ```
+
+## Quick Start Tutorial
+
+1. **Set Your OpenAI API Key**:
+   ```bash
+   python main.py -k YOUR_API_KEY
+   ```
+
+2. **Load a Conversation**:
+   ```bash
+   python main.py -c CONVERSATION_NAME
+   ```
+
+3. **Get a Response for the Loaded Conversation**:
+   ```bash
+   python main.py -r "Your input message"
+   ```
 
 ## Usage
 
-### Set Your OpenAI API Key
+1. **Set Your OpenAI API Key**:
+   ```bash
    python main.py -k YOUR_API_KEY
+   python main.py --set-api-key YOUR_API_KEY
+   ```
 
-### Set the Model (Optional)
-   python main.py -m YOUR_MODEL
+2. **Set the Model (Optional, default is gpt-4o-mini)**:
+   ```bash
+   python main.py -m gpt-4o
+   python main.py --set-model gpt-4o-mini
+   ```
 
-### Set the Text Editor (Optional)
-   python main.py -E YOUR_EDITOR
+3. **Set the Text Editor for Editing the System Message (Default is nano) (Optional)**:
+   ```bash
+   python main.py -E nano
+   python main.py --set-editor vim
+   ```
 
-### Edit the System Message
+4. **Edit the System Message**:
+   ```bash
    python main.py -e
+   python main.py --edit-system-message
+   ```
 
-### Load a Conversation
+5. **Load a Conversation**:
+   ```bash
    python main.py -c CONVERSATION_NAME
+   python main.py --conversation CONVERSATION_NAME
+   ```
 
-### Get a Response for the Loaded Conversation
+6. **Get a Response for the Loaded Conversation**:
+   ```bash
    python main.py -r "Your input message"
+   python main.py --response "Your input message"
+   ```
 
-### Check the Status of the Current Conversation
+7. **Check the Status of the Currently Loaded Conversation**:
+   ```bash
    python main.py -s
+   python main.py --status
+   ```
 
-### Reset the System Message to Default
+8. **Reset the System Message to Default**:
+   ```bash
    python main.py -R
+   python main.py --reset-system-message
+   ```
 
-### Delete a Conversation
+9. **Delete a Conversation**:
+   ```bash
    python main.py -d CONVERSATION_NAME
+   python main.py --delete-conversation CONVERSATION_NAME
+   ```
 
-### Show the help text
-   python main.py -h
+10. **Show the Help Text**:
+    ```bash
+    python main.py -h
+    python main.py --help
+    ```
 
 ## Contributing
 
